@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Facepunch Style Forum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <!-- Навигационная панель -->
+    <div class="navbar">
+        <a href="https://facepunch.com/">Home</a>
+        <a onclick="window.location.href='forum.html';"href="#">Forum</a>
+        <a href="https://facepunch.com/#games">Games</a>
+        <a href="https://facepunch.com/contact">Contact</a>
+    </div>
+
+    <!-- Контейнер с контентом -->
+    <div class="container">
+
+        <!-- Заголовок страницы -->
+        <h1>Welcome to Facepunch Style Forum</h1>
+
+        <!-- Карточки постов -->
+        <div class="card">
+            <h2>Forum Post 1</h2>
+            <p>This is the content of the first forum post. It's styled using a simple and clean card layout.</p>
+            <a href="#">Read more...</a>
+        </div>
+
+        <div class="card">
+            <h2>Forum Post 2</h2>
+            <p>This is the content of the second forum post. The design is inspired by the Facepunch forum layout.</p>
+            <a href="#">Read more...</a>
+        </div>
+
+        <!-- Таблица с пользователями -->
+        <h2>Active Users</h2>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Posts</th>
+                    <th>Joined</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>John Doe</td>
+                    <td>120</td>
+                    <td>January 2022</td>
+                </tr>
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>85</td>
+                    <td>March 2023</td>
+                </tr>
+                <tr>
+                    <td>Sam Wilson</td>
+                    <td>67</td>
+                    <td>June 2021</td>
+                </tr>
+            </tbody>
+        </table>
+
+        
+        <button class="button" onclick="window.location.href='new_post.html';">Create New Post</button>
+
+
+    </div>
+
+</body>
+</html>

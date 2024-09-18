@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Create New Post</title>
+    <!-- Подключаем внешний CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Кнопка для открытия формы создания поста -->
+    <button class="button" id="createPostButton">Create New Post</button>
+
+    <!-- Модальное окно -->
+    <div id="createPostModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create New Post</h2>
+            <form id="newPostForm">
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" required>
+                
+                <label for="content">Content</label>
+                <textarea id="content" name="content" rows="5" required></textarea>
+                
+                <button type="submit" class="button">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Получаем элементы
+        const modal = document.getElementById("createPostModal");
+        const btn = document.getElementById("createPostButton");
+        const span = document.getElementsByClassName("close")[0];
+
+        // Открытие модального окна при нажатии на кнопку
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+
+        // Закрытие модального окна при нажатии на крестик (X)
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // Закрытие модального окна при клике вне окна
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
