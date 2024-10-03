@@ -67,3 +67,24 @@ textarea {
     border: 1px solid #d1d1d1;
     border-radius: 4px;
 }
+.navbar {
+    background-color: #ff0000;
+    padding: 15px;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    color: white;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.navbar a:hover {
+    color: #ccc;
+}
