@@ -5,19 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Rust Forum</title>
+    <!-- Link to CSS file -->
     <link rel="stylesheet" href="s.css">
 </head>
 <body>
-       <div class="navbar">
-        <a onclick="window.location.href='index.html';"href="#">Home</a>
-        <a onclick="window.location.href='forum.html';"href="#">Forum</a>
-        <a href="https://facepunch.com/#games">Games</a>
-        <a href="https://facepunch.com/contact">Contact</a>
-    </div>
 
     <div class="forum-container">
         <h1>Rust Game Forum</h1>
 
+        <!-- Fake posts about Rust -->
         <div class="post">
             <h3>Post 1: How to Survive the First Night in Rust?</h3>
             <p>I just started playing Rust and I have no idea how to survive the first night. Any tips on gathering resources and building a shelter?</p>
@@ -42,8 +38,14 @@
             <span class="post-meta">Posted by: Critic | Date: 2024-09-08</span>
         </div>
 
+        
         <div class="new-post">
             <h3>Create a New Post</h3>
+        
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" value="2024-12-11" required>
+        
             <form id="newPostForm">
                 <label for="title">Title</label>
                 <input type="text" id="title" name="title" required>
@@ -51,10 +53,27 @@
                 <label for="content">Content</label>
                 <textarea id="content" name="content" rows="5" required></textarea>
                 
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="category" value="survival"> Survival Tips
+                    </label>
+                    <label>
+                        <input type="checkbox" name="category" value="strategies"> Strategies
+                    </label>
+                    <label>
+                        <input type="checkbox" name="category" value="updates"> Game Updates
+                    </label>
+                </div>
+        
+               
+                <div class="slider-container">
+                    <label for="hours">Hours:</label>
+                    <input type="range" id="hours" name="hours" min="0" max="10000" step="1" value="0">
+                    <output for="hours" id="hours-output">0</output> <!-- Static output value -->
+                </div>
+        
                 <button type="submit" class="button">Submit</button>
             </form>
         </div>
-    </div>
-
 </body>
 </html>
